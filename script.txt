@@ -1,0 +1,10 @@
+Create Table Users
+(SSN number(14) primary key, PASS varchar2(50), USER_NAME varchar2(50), AGE number(3) , FLAG number(1) , statment varchar(100));
+Create Table ELECATION
+(ELECATION_ID number(5) primary key, ELECATION_NAME varchar2(50), START_DATE date, END_DATE date);
+Create Table vote
+(Vote_ID number(5) primary key
+,Voter_SSN number(14)  references Users (SSN) ON Delete cascade 
+,CANDIDATE_SSN number(14)  references Users (SSN) ON Delete cascade 
+,E_ID number(5) references ELECATION (ELECATION_ID) ON Delete cascade
+,Constraint oneVotePerElecation unique(Voter_SSN,E_ID));
