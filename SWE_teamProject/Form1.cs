@@ -30,7 +30,7 @@ namespace SWE_teamProject
 
         private void load_Click(object sender, EventArgs e)
         {
-            string ordb = "Data source=orcl;User Id=scott; Password = tiger; ";
+            string ordb = "Data source=orcl;User Id=hr; Password = hr; ";
             string cmdstr = "";
             if (voter.Checked)
             {
