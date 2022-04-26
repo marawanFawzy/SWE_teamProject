@@ -17,7 +17,8 @@ namespace SWE_teamProject
     {
         OracleDataAdapter adapter;
         DataSet ds;
-
+        CrystalReport1 cr1;
+        CrystalReport2 cr2;
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,8 @@ namespace SWE_teamProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            cr1 = new CrystalReport1();
+            cr2 = new CrystalReport2();
         }
 
         private void load_Click(object sender, EventArgs e)
@@ -51,5 +53,19 @@ namespace SWE_teamProject
             OracleCommandBuilder builder = new OracleCommandBuilder(adapter);
             adapter.Update(ds.Tables[0]);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            crystalReportViewer1.ReportSource = cr1;
+        }
+        private void crystalReportViewer2_Load(object sender, EventArgs e)
+        {
+            crystalReportViewer2.ReportSource = cr2;
+        }
+
     }
 }

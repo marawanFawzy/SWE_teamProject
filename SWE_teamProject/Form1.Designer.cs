@@ -32,18 +32,21 @@ namespace SWE_teamProject
             this.load = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.options = new System.Windows.Forms.GroupBox();
-            this.voter = new System.Windows.Forms.RadioButton();
             this.candidate = new System.Windows.Forms.RadioButton();
+            this.voter = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(607, 53);
+            this.load.Location = new System.Drawing.Point(809, 65);
+            this.load.Margin = new System.Windows.Forms.Padding(4);
             this.load.Name = "load";
-            this.load.Size = new System.Drawing.Size(75, 23);
+            this.load.Size = new System.Drawing.Size(100, 28);
             this.load.TabIndex = 0;
             this.load.Text = "load";
             this.load.UseVisualStyleBackColor = true;
@@ -51,9 +54,10 @@ namespace SWE_teamProject
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(664, 388);
+            this.save.Location = new System.Drawing.Point(885, 478);
+            this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(101, 50);
+            this.save.Size = new System.Drawing.Size(135, 62);
             this.save.TabIndex = 1;
             this.save.Text = "save";
             this.save.UseVisualStyleBackColor = true;
@@ -63,53 +67,85 @@ namespace SWE_teamProject
             // 
             this.options.Controls.Add(this.candidate);
             this.options.Controls.Add(this.voter);
-            this.options.Location = new System.Drawing.Point(276, 12);
+            this.options.Location = new System.Drawing.Point(368, 15);
+            this.options.Margin = new System.Windows.Forms.Padding(4);
             this.options.Name = "options";
-            this.options.Size = new System.Drawing.Size(200, 100);
+            this.options.Padding = new System.Windows.Forms.Padding(4);
+            this.options.Size = new System.Drawing.Size(267, 123);
             this.options.TabIndex = 2;
             this.options.TabStop = false;
             this.options.Text = "options";
             // 
+            // candidate
+            // 
+            this.candidate.AutoSize = true;
+            this.candidate.Location = new System.Drawing.Point(39, 84);
+            this.candidate.Margin = new System.Windows.Forms.Padding(4);
+            this.candidate.Name = "candidate";
+            this.candidate.Size = new System.Drawing.Size(91, 21);
+            this.candidate.TabIndex = 1;
+            this.candidate.TabStop = true;
+            this.candidate.Text = "candidate";
+            this.candidate.UseVisualStyleBackColor = true;
+            // 
             // voter
             // 
             this.voter.AutoSize = true;
-            this.voter.Location = new System.Drawing.Point(29, 32);
+            this.voter.Location = new System.Drawing.Point(39, 39);
+            this.voter.Margin = new System.Windows.Forms.Padding(4);
             this.voter.Name = "voter";
-            this.voter.Size = new System.Drawing.Size(51, 17);
+            this.voter.Size = new System.Drawing.Size(61, 21);
             this.voter.TabIndex = 0;
             this.voter.TabStop = true;
             this.voter.Text = "voter";
             this.voter.UseMnemonic = false;
             this.voter.UseVisualStyleBackColor = true;
             // 
-            // candidate
-            // 
-            this.candidate.AutoSize = true;
-            this.candidate.Location = new System.Drawing.Point(29, 68);
-            this.candidate.Name = "candidate";
-            this.candidate.Size = new System.Drawing.Size(72, 17);
-            this.candidate.TabIndex = 1;
-            this.candidate.TabStop = true;
-            this.candidate.Text = "candidate";
-            this.candidate.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 135);
+            this.dataGridView1.Location = new System.Drawing.Point(93, 166);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(669, 213);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(892, 262);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(150, 150);
+            this.crystalReportViewer1.TabIndex = 4;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = -1;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(166, 0);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.Size = new System.Drawing.Size(150, 150);
+            this.crystalReportViewer2.TabIndex = 5;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.crystalReportViewer2);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.options);
             this.Controls.Add(this.save);
             this.Controls.Add(this.load);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -128,6 +164,8 @@ namespace SWE_teamProject
         private System.Windows.Forms.RadioButton candidate;
         private System.Windows.Forms.RadioButton voter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
     }
 }
 
