@@ -19,6 +19,7 @@ namespace SWE_teamProject
         DataSet ds;
         CrystalReport1 cr1;
         CrystalReport2 cr2;
+        
         public Form1()
         {
             InitializeComponent();
@@ -60,12 +61,18 @@ namespace SWE_teamProject
         }
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
-            crystalReportViewer1.ReportSource = cr1;
+           
         }
         private void crystalReportViewer2_Load(object sender, EventArgs e)
         {
-            crystalReportViewer2.ReportSource = cr2;
+           
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            crystalReportViewer1.ReportSource = cr1;
+            //TODO regenerate report 2 before submit 
+            crystalReportViewer2.ReportSource = cr2;
+        }
     }
 }

@@ -37,16 +37,17 @@ namespace SWE_teamProject
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.button1 = new System.Windows.Forms.Button();
             this.options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(809, 65);
+            this.load.Location = new System.Drawing.Point(379, 398);
             this.load.Margin = new System.Windows.Forms.Padding(4);
             this.load.Name = "load";
-            this.load.Size = new System.Drawing.Size(100, 28);
+            this.load.Size = new System.Drawing.Size(135, 62);
             this.load.TabIndex = 0;
             this.load.Text = "load";
             this.load.UseVisualStyleBackColor = true;
@@ -54,7 +55,7 @@ namespace SWE_teamProject
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(885, 478);
+            this.save.Location = new System.Drawing.Point(42, 398);
             this.save.Margin = new System.Windows.Forms.Padding(4);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(135, 62);
@@ -67,7 +68,7 @@ namespace SWE_teamProject
             // 
             this.options.Controls.Add(this.candidate);
             this.options.Controls.Add(this.voter);
-            this.options.Location = new System.Drawing.Point(368, 15);
+            this.options.Location = new System.Drawing.Point(138, 13);
             this.options.Margin = new System.Windows.Forms.Padding(4);
             this.options.Name = "options";
             this.options.Padding = new System.Windows.Forms.Padding(4);
@@ -104,11 +105,11 @@ namespace SWE_teamProject
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 166);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 144);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(682, 392);
+            this.dataGridView1.Size = new System.Drawing.Size(559, 211);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -117,9 +118,9 @@ namespace SWE_teamProject
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(407, 166);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(579, 364);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(360, 392);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(753, 281);
             this.crystalReportViewer1.TabIndex = 4;
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
@@ -128,17 +129,28 @@ namespace SWE_teamProject
             this.crystalReportViewer2.ActiveViewIndex = -1;
             this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(85, 166);
+            this.crystalReportViewer2.Location = new System.Drawing.Point(579, 84);
             this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.Size = new System.Drawing.Size(331, 392);
+            this.crystalReportViewer2.Size = new System.Drawing.Size(769, 259);
             this.crystalReportViewer2.TabIndex = 5;
             this.crystalReportViewer2.Load += new System.EventHandler(this.crystalReportViewer2_Load);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(860, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "generate reports";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1360, 657);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.dataGridView1);
@@ -166,6 +178,7 @@ namespace SWE_teamProject
         private System.Windows.Forms.DataGridView dataGridView1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
