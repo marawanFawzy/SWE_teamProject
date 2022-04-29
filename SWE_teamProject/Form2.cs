@@ -68,8 +68,8 @@ namespace SWE_teamProject
                 c.CommandType = CommandType.Text;
                 c.Parameters.Add("CANDIDATE_SSN", int.Parse(comboBox1.SelectedItem.ToString()));
                 c.Parameters.Add("VOTER_SSN", int.Parse(textBox4.Text.ToString()));
-                c.Parameters.Add("VOTE_ID", 55555);///////////////////////
-                c.Parameters.Add("E_ID", 22222);//////////////////////////
+                c.Parameters.Add("VOTE_ID", int.Parse(textBox8.Text.ToString()));
+                c.Parameters.Add("E_ID", 1);
 
                 int r = c.ExecuteNonQuery();
                 if (r != 0)
