@@ -19,6 +19,9 @@ namespace SWE_teamProject
         DataSet ds;
         CrystalReport1 cr1;
         CrystalReport2 cr2;
+        string ordb = "Data source=orcl;User Id=hr; Password = hr; ";
+        string cmdstr = "";
+        OracleConnection conn;
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +35,6 @@ namespace SWE_teamProject
 
         private void load_Click(object sender, EventArgs e)
         {
-            string ordb = "Data source=orcl;User Id=hr; Password = hr; ";
-            string cmdstr = "";
             if (voter.Checked)
             {
                 cmdstr = "select * from users WHERE FLAG = 0";
@@ -66,6 +67,8 @@ namespace SWE_teamProject
         {
             crystalReportViewer2.ReportSource = cr2;
         }
+        // 1
+       
 
     }
 }
