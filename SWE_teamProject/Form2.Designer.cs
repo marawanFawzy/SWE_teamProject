@@ -48,9 +48,9 @@ namespace SWE_teamProject
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 11);
+            this.comboBox1.Location = new System.Drawing.Point(3, 11);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(201, 24);
+            this.comboBox1.Size = new System.Drawing.Size(226, 24);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
