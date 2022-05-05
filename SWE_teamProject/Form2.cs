@@ -87,12 +87,19 @@ namespace SWE_teamProject
             c.Parameters.Add("VOTER_SSN",long.Parse(textBox4.Text.ToString()));
             c.Parameters.Add("VOTE_ID",long.Parse(textBox8.Text.ToString()));
             c.Parameters.Add("E_ID", 1);
-
-            int r = c.ExecuteNonQuery();
-            if (r != -1)
+            try
             {
-                MessageBox.Show("You Voted");
+                int r = c.ExecuteNonQuery();
+                if (r != -1)
+                {
+                    MessageBox.Show("You Voted");
+                }
             }
+            catch
+            {
+                MessageBox.Show("Try Agine Later");
+            }
+            
         }
         // pepeol voted
         private void button2_Click(object sender, EventArgs e)
@@ -128,6 +135,13 @@ namespace SWE_teamProject
                 textBox7.Text = "ERROR";
             }
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 f3 = new Form3();
+            f3.ShowDialog();
         }
     }
 }

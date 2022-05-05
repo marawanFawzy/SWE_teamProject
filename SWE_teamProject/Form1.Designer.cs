@@ -38,6 +38,7 @@ namespace SWE_teamProject
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.button1 = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.options.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -145,11 +146,22 @@ namespace SWE_teamProject
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(24, 611);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(153, 34);
+            this.back.TabIndex = 7;
+            this.back.Text = "Back To Home";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1360, 657);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.crystalReportViewer1);
@@ -179,6 +191,7 @@ namespace SWE_teamProject
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button back;
     }
 }
 
