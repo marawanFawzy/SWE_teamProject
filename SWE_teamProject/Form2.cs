@@ -82,7 +82,7 @@ namespace SWE_teamProject
             OracleCommand c = new OracleCommand();
             c.Connection = conn;
             c.CommandText = "INSERT INTO VOTE VALUES(:VOTE_ID,:VOTER_SSN,:CANDIDATE_SSN,:E_ID)";
-            c.CommandType = CommandType.Text;
+           // c.CommandType = CommandType.Text;
             c.Parameters.Add("CANDIDATE_SSN",long.Parse(comboBox1.SelectedItem.ToString()));
             c.Parameters.Add("VOTER_SSN",long.Parse(textBox4.Text.ToString()));
             c.Parameters.Add("VOTE_ID",long.Parse(textBox8.Text.ToString()));
