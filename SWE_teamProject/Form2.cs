@@ -67,8 +67,8 @@ namespace SWE_teamProject
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", long.Parse(textBox4.Text.ToString()));
             cmd.Parameters.Add("pass", textBox5.Text.ToString());
-            OracleDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            int r = cmd.ExecuteNonQuery();
+            if (r!=0)
             {
                 insert_vote();
             }
@@ -76,7 +76,6 @@ namespace SWE_teamProject
             {
                 MessageBox.Show("Check Your SSN Or Password");
             }
-            dr.Close();
         }
         public void insert_vote()
         {
@@ -88,19 +87,25 @@ namespace SWE_teamProject
             c.Parameters.Add("VOTER_SSN",long.Parse(textBox4.Text.ToString()));
             c.Parameters.Add("VOTE_ID",long.Parse(textBox8.Text.ToString()));
             c.Parameters.Add("E_ID", 1);
-            try
+              try
+              {
+                  int r = c.ExecuteNonQuery();
+                  if (r != -1)
+                  {
+                      MessageBox.Show("You Voted");
+                  }
+              }
+              catch
+              {
+                  MessageBox.Show("Try Agine Later");
+              }
+            /*
+            int r = c.ExecuteNonQuery();
+            if (r != -1)
             {
-                int r = c.ExecuteNonQuery();
-                if (r != -1)
-                {
-                    MessageBox.Show("You Voted");
-                }
+                MessageBox.Show("You Voted");
             }
-            catch
-            {
-                MessageBox.Show("Try Agine Later");
-            }
-            
+            */
         }
         // pepeol voted
         private void button2_Click(object sender, EventArgs e)

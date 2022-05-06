@@ -163,11 +163,11 @@ namespace SWE_teamProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1045, 129);
+            this.label1.Location = new System.Drawing.Point(1035, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
+            this.label1.Size = new System.Drawing.Size(95, 17);
             this.label1.TabIndex = 13;
-            this.label1.Text = "vote id ";
+            this.label1.Text = "Id 10 number ";
             // 
             // button4
             // 
@@ -182,7 +182,7 @@ namespace SWE_teamProject
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1045, 68);
+            this.label2.Location = new System.Drawing.Point(1030, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 15;
@@ -191,7 +191,7 @@ namespace SWE_teamProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1045, 99);
+            this.label3.Location = new System.Drawing.Point(1035, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 16;
