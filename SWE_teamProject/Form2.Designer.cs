@@ -133,7 +133,7 @@ namespace SWE_teamProject
             // 
             this.button3.Location = new System.Drawing.Point(1136, 563);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 23);
+            this.button3.Size = new System.Drawing.Size(190, 23);
             this.button3.TabIndex = 9;
             this.button3.Text = "show number of votes ";
             this.button3.UseVisualStyleBackColor = true;
@@ -143,14 +143,14 @@ namespace SWE_teamProject
             // 
             this.textBox6.Location = new System.Drawing.Point(1136, 534);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(154, 22);
+            this.textBox6.Size = new System.Drawing.Size(190, 22);
             this.textBox6.TabIndex = 10;
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(1136, 592);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(154, 22);
+            this.textBox7.Size = new System.Drawing.Size(190, 22);
             this.textBox7.TabIndex = 11;
             // 
             // textBox8
@@ -163,11 +163,11 @@ namespace SWE_teamProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1035, 129);
+            this.label1.Location = new System.Drawing.Point(1044, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Id 10 number ";
+            this.label1.Text = "VoteID";
             // 
             // button4
             // 
@@ -209,7 +209,7 @@ namespace SWE_teamProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1015, 597);
+            this.label5.Location = new System.Drawing.Point(1035, 595);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 18;
@@ -236,7 +236,7 @@ namespace SWE_teamProject
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(411, 13);
+            this.label8.Location = new System.Drawing.Point(365, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 17);
             this.label8.TabIndex = 21;
@@ -245,7 +245,7 @@ namespace SWE_teamProject
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(102, 13);
+            this.label9.Location = new System.Drawing.Point(97, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 17);
             this.label9.TabIndex = 22;
@@ -254,7 +254,7 @@ namespace SWE_teamProject
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(122, 88);
+            this.label10.Location = new System.Drawing.Point(122, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 17);
             this.label10.TabIndex = 23;
@@ -263,11 +263,12 @@ namespace SWE_teamProject
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1073, 493);
+            this.label11.Location = new System.Drawing.Point(1133, 493);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(183, 17);
+            this.label11.Size = new System.Drawing.Size(185, 17);
             this.label11.TabIndex = 24;
-            this.label11.Text = "Total Votes Candidate have";
+            this.label11.Text = "Total Votes for a Candidate ";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Form2
             // 

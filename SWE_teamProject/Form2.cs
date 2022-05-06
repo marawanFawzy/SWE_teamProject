@@ -14,7 +14,7 @@ namespace SWE_teamProject
 {
     public partial class Form2 : Form
     {
-        string ordb = "Data source=orcl1;User Id=hr; Password=hr;";
+        string ordb = "Data source=orcl;User Id=hr; Password=hr;";
         OracleConnection conn;
         public Form2()
         {
@@ -82,10 +82,12 @@ namespace SWE_teamProject
             OracleCommand c = new OracleCommand();
             c.Connection = conn;
             c.CommandText = "INSERT INTO VOTE VALUES(:VOTE_ID,:VOTER_SSN,:CANDIDATE_SSN,:E_ID)";
-           // c.CommandType = CommandType.Text;
+            // c.CommandType = CommandType.Text;
+            c.Parameters.Add("VOTE_ID", long.Parse(textBox8.Text.ToString()));
+            c.Parameters.Add("VOTER_SSN", long.Parse(textBox4.Text.ToString()));
             c.Parameters.Add("CANDIDATE_SSN",long.Parse(comboBox1.SelectedItem.ToString()));
-            c.Parameters.Add("VOTER_SSN",long.Parse(textBox4.Text.ToString()));
-            c.Parameters.Add("VOTE_ID",long.Parse(textBox8.Text.ToString()));
+
+            
             c.Parameters.Add("E_ID", 1);
               try
               {
@@ -97,7 +99,7 @@ namespace SWE_teamProject
               }
               catch
               {
-                  MessageBox.Show("Try Agine Later");
+                  MessageBox.Show("Try Again Later");
               }
             /*
             int r = c.ExecuteNonQuery();
@@ -148,6 +150,11 @@ namespace SWE_teamProject
             this.Hide();
             Form3 f3 = new Form3();
             f3.ShowDialog();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
