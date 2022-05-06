@@ -67,8 +67,8 @@ namespace SWE_teamProject
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", long.Parse(textBox4.Text.ToString()));
             cmd.Parameters.Add("pass", textBox5.Text.ToString());
-            int rcmd = cmd.ExecuteNonQuery();
-            if (rcmd != 0)
+            OracleDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
             {
                 insert_vote();
             }
@@ -76,6 +76,7 @@ namespace SWE_teamProject
             {
                 MessageBox.Show("Check Your SSN Or Password");
             }
+            dr.Close();
         }
         public void insert_vote()
         {
